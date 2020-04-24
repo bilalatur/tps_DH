@@ -1,0 +1,19 @@
+
+#contenido {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid burlywood
+}
+
+#boton {
+    color: white;
+    background-color: brown;
+    height: 40px;
+    width: 90px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

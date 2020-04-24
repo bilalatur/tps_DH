@@ -1,0 +1,78 @@
+html{
+    width: 1050px;
+    border: 5px solid black;
+}
+header{
+    padding-bottom: 20px;
+    margin: 10px;
+    border-bottom: 1px solid gray;
+    overflow: hidden;
+}
+
+main{
+    overflow: hidden;
+}
+
+nav{
+    width: 300px;
+    height: 1850px;
+    padding: 15px;
+    border-right: 1px solid gray;
+    float: left;
+    overflow: hidden;
+    width: 300px;
+}
+
+section{
+    width: 650px;
+    padding: 15px;
+    float: right;
+    overflow: hidden;
+    width: 610px;
+}
+
+nav{
+    overflow: hidden;
+}
+
+span{
+    font-weight: bold;
+}
+
+footer {
+    background-color: gray;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+img {
+    float: right;
+}
+
+footer{
+    overflow: hidden;
+}
+
+#footer{
+    float: left;
+    align-content: center;
+    width: 200px;
+    overflow: hidden;
+}
+#footer2{
+    overflow: hidden;
+    float: right;
+    color: white;
+    text-align: center;
+    padding-right: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer3 {
+    color: white;
+    text-decoration: none;
+}

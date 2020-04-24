@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Encuesta de satisfaccio¿ón</title>
+        <Meta charset = "utf-8">
+        <link rel = "stylesheet" href = "css/style_form.css">
+    </header>
+    <div id = "contenido">
+        <body>
+            <form action="formulario.html" method="POST">
+                <p>
+                    <h4>¿De dónde sos?</h4>
+                    <select name = “lugar” id “”>
+                        <option value = “mendoza”> Mendoza </option>
+                        <option value = “bsas”> Buenos Aires </option>
+                        <option value = “otraprov”> Otra provincia </option>
+                        <option value = “otropais”> Otro país </option>
+                    </select>
+
+                </p>
+                <p>
+                    <h4>¿Qué te pareció la iluminación del ambiente?</h4>
+                    <input type = "checkbox" name = “ilum” value = “muyacorde” checked> Muy acorde <br>
+                    <input type = "checkbox" name = “ilum” value = “buena”>  Buena pero podría mejorar <br>
+                    <input type = "checkbox" name = “ilum” value = “mala”>  Mala <br>
+                </p>
+                <p>
+                    <h4>¿Qué tipo de plato fue el que más te gustó?</h4>
+                    <input type = "checkbox" = “género” value = “entrada”> Entrada <br>
+                    <input type = "checkbox" name = “género” value = “principal” checked>  Plato principal <br>
+                    <input type = "checkbox" name = “género” value = “postre”>  Postre <br>
+                    <input type = "checkbox" name = “género” value = “otro”>  Otro <br>
+                </p>
+                <p>
+                    <h4>¿Recomendarías el lugar?</h4>
+                    <spin><input type = "radio" name = “” checked   > Si
+                    <input type = "radio" name = “” > No</spin>
+                </p>
+                <p>
+                    <h4>¿Por qué?</h4>
+                    <textarea name = “Comentario” id = “” cols = "70" rows = "5"></textarea>
+                </p>
+                <p>
+                    <h4>Dejanos tus datos y nos pondremos en contacto con vos</h4>
+                    Nombre <input type = "text" name = "nombre"><br><br>
+                    Email <input type = "email" name = "email">
+                </p>
+                <p>
+                <br><span><input id="boton" type = "submit" value = "ENVIAR"> <input id="boton" type = "reset" value = "RESETEAR"></span>
+                </p>
+                <p>
+                    <a href="index.html">Volver a la carta</a>
+                </p>
+            </form>
+        </body>
+    </div>
+</html>
