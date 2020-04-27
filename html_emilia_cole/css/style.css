@@ -60,7 +60,6 @@ nav a {
 #bodyAbout{
     background-image: url("../img/emilia-about.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: contain;
     background-position: right;
 }
@@ -137,4 +136,41 @@ nav a {
 
 .iconosMenuHor img {
     width: 15px;
+}
+
+#bodyContact{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.menuContact{
+    float: right;
+}
+
+#mapa{
+    width: 700px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#h1Contact{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+#h4Contact{
+    color: black;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    text-decoration-style: none;
+}
+
+#h5Contact{
+    text-transform: uppercase;
+    color: #4fb19d;
+    font-family: "Open Sans", sans-serif;
 }
