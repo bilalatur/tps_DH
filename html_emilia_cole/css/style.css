@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&family=Work+Sans:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.iconos {
+    margin-top: 5px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.iconos img {
+    width: 15px;
+}
+
+.bodyHome{
+    background-image: url("../img/emilia-home.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+}
+
+#navegadorHome {
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+#h2Home{
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        width: 250px;
+        position: absolute;
+        font-size: 20px;
+        margin-top:170px;
+        margin-left: 40px;
+}
+
+#h1Home{
+    position: absolute;
+    text-transform: uppercase;
+    background-color: rgba(250, 250, 200, 0.2);
+    font-size: 30px;
+    font-family: 'Work Sans', sans-serif;
+    margin-left: 20px;
+    margin-top: 400px;
+}
+
+#bodyAbout{
+    background-image: url("../img/emilia-about.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: right;
+}
+
+#h1About{
+    margin-top: 240px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    width: 300px;
+    font-size: 50px;
+}
+
+#citaAbout1{
+    margin-left: 40px;
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #44a391;
+    width: 440px;
+    font-size: 22px;
+}
+
+
+#citaAbout2{
+    margin-left: 40px;
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #44a391;
+    width: 260px;
+    font-size: 22px;
+}
+
+#autorCita{
+    margin-left: 40px;
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #44a391;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+#citasAbout{
+    float: left;
+}
+
+#menuHor{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#navegadorHor{
+    background-color: rgba(250, 250, 200, 0.3);
+    padding: 0;
+}
+
+#navegadorHor li{
+    display: inline;
+}
+
+#navegadorHor li a{
+    text-transform: none;
+    color: gray;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+.iconosMenuHor {
+    margin-top: 5px;
+    margin-left: 250px;
+    position: relative;
+}
+
+.iconosMenuHor img {
+    width: 15px;
+}
