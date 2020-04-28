@@ -174,3 +174,117 @@ nav a {
     color: #4fb19d;
     font-family: "Open Sans", sans-serif;
 }
+
+#contact{
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+}
+
+#mailto{
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+#bodyMusic{
+    margin: 0 auto;
+    width: 900px;
+    background-image: url('../img/emilia-music-top.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:70%;
+}
+
+#navegadorHorMusic{
+    position: relative;
+    margin-left: 500px;
+    margin-top: 40px;
+    background-color: rgba(250, 250, 200, 0.3);
+    padding: 0;
+    z-index: 10;
+}
+
+#navegadorHorMusic li{
+    display: inline;
+}
+
+#navegadorHorMusic li a{
+    text-transform: none;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+.iconosMusic {
+    margin-top: 5px;
+    margin-left: 750px;
+    position: relative;
+}
+
+.iconosMusic img {
+    width: 15px;
+}
+
+#h1Music{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 100px;
+    text-transform: uppercase;
+}
+
+#h5Music{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+#linksMusic{
+    margin-top: 20px;
+    font-size: 12px;
+    list-style: none;
+}
+
+#linksMusic a{
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#h3Music{
+    margin-top: 30px;
+}
+
+#h3Music h3{
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+#h3Music img{
+    width: 50%;
+}
+
+.playlist{
+    margin-top: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.playlist img{
+    width: 8px;
+}
+
+#GoTop{
+    margin-top: 20px;
+}
+
+#GoTop a{
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    padding: 15px;
+}
+
+#creditosMusic{
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+}
