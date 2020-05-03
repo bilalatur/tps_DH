@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Craftsy - Login</title>
+        <meta charset = “utf-8”>
+        <link rel = "stylesheet" href = "css/style.css">
+    </head>
+    <body>
+        <div>
+            <div class = "menuSuperior">
+                <nav>
+                    <img src="img/logo.png" alt="">
+                    <ul class = "menuIzq">
+                        <li><a href="index.html">Smartphones</a></li>
+                        <li><a href="index.html">Tablets</a></li>
+                        <li><a href="index.html">Computadoras</a></li>
+                    </ul>
+                    <ul class = "menuDer">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Registro</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h1 id = "login">Registrarse    </h1>
+                <form action="Login">
+                    <br><label for="Nombre">Nombre</label><br>
+                    <input type = “text” id ="nombre" placeholder = "Nombre" style="width: 250px" required><br>
+                    <br><label for="email">Email</label><br>
+                    <input type = “email” id ="email" placeholder = "Email" style="width: 250px" required><br>
+                    <br><label for="pass">Contraseña</label><br>
+                    <input type = “password” id = "pass" placeholder = "Contraseña" style="width: 250px" required>
+                    <p><label for=""><b>Pais de Nacimiento</b></label><br>
+                    <select name = "pais” id "">
+                        <option value = "Argentina"> Argentina </option>
+                        <option value = "Chile"> Chile </option>
+                        <option value = "Brasil"> Brasil </option>
+                        <option value = "Uruguay"> Uruguay </option>
+                    </select></p>
+                    <p><label for = ""> <b> Género </b></label><br>
+                        <input type ="radio" name = “Masculino” value = “M”> Masculino
+                        <input type ="radio" name = “Femenino” value = “F”> Femenino
+                        <input type ="radio" name = “No” value = “N”> Prefiero no decirlo
+                    </p>
+                    <p><label for = ""> <b> Hobbies </b></label><br>
+                        <input type ="radio" name = “Guitarra” value = “G”> Guitarra
+                        <input type ="radio" name = “Futbol” value = “F”> Fútbol
+                        <input type ="radio" name = “Tenis” value = “T”> Tenis
+                        <input type ="radio" name = “Programacion” value = “P”> Programación
+                    </p>
+                    <p>
+                        <label for = “”> <b>Dejanos un comentario</b></label><br>
+                        <textarea name="comentario" id="" cols="35" rows="5"></textarea>
+                        </p>
+                    <p><input type ="radio"><label for = "">Acepto los términos y condiciones</label><br>
+                    <br><button class = "boton" type="submit">Registrarme</button>
+                    <button class = "boton" type="submit">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

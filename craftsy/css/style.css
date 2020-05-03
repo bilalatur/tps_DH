@@ -1,0 +1,121 @@
+body{
+    width: 1140px;
+    padding-top: 10px;
+    margin: 0 auto;
+    background-color: #bbf3fb;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    padding-left: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.menuSuperior{
+    margin: 0 auto;
+    width: 100%;
+    background-color:#ef4c2b;
+    overflow: hidden;
+}
+.menuSuperior img{
+    float: left;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+.menuIzq{
+    float: left;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 10px;
+}
+.menuDer{
+    text-transform: uppercase;
+    float: right;
+    color: white;
+    margin-right: 20px;
+}
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    float: left;
+    background-color: white;
+}
+.principal article{
+    width: 38%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.principal article p{
+    width: 100%;
+}
+.more{
+    padding: 2px;
+    text-transform: uppercase;
+    font-size: small;
+    display: inline;
+    background-color: #ef4c2b;
+    color: white;
+}
+.barraLateral{
+    float: right;
+    width: 23%;
+    margin-right: 22px;
+    overflow: hidden;
+}
+.barraLateral h3{
+    border: 1px solid white;
+    background-color: white;
+    padding: 3px;
+}
+.barraLateral article{
+    border: 1px solid white;
+    background-color: white;
+    padding: 3px;
+    margin: 3px;
+}
+.artLateral{
+    display: flex;
+    flex-wrap: wrap;
+}
+.artLateral img{
+    align-self: flex-start;
+    width: 50%;
+}
+.artLateral p{
+    align-self: center;
+    width: 48%;
+    padding-left: 2%;
+}
+.imagenes{
+    border: 1px solid white;
+    background-color: white;
+    padding: 3px;
+    margin: 3px;
+}
+.imagenes img{
+    width: 95%;
+    margin: 3%;
+}
+h1{
+    text-align: center;
+}
+form{
+    margin-left: 40%;
+}
+.recordarme{
+    margin-left: 23%;
+}
+.boton{
+    text-align: center;
+    background-color: #47a0d3;
+    color: white;
+    padding: 5px;
+}
