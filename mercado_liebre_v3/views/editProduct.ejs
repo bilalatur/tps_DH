@@ -1,0 +1,29 @@
+<%- include('./partials/head') %> 
+  <body class="body-det">
+    <%- include('./partials/header') %> 
+    <div class="container">
+        <h1 class="col-12 title-form"> Editar producto: <%= prod.name %> </h1>
+        <div class="row col-12">
+            <div class="form-create col-12">
+                <form class="col-12" action="/products/<%=prod.id%>/edit?_method=PUT" method="POST">
+                    <label class="label-create col-12" for="id" name=>Id</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" value="<%= prod.id %>" name="id"><br>
+                    <label class="label-create col-12" for="name">Nombre</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" value="<%= prod.name %>" name="name"><br>
+                    <label class="label-create col-12" for="description">Descripción</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" name="description" value="<%= prod.description %>"><br>
+                    <label class="label-create col-12" for="price">Precio</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" name="price" value="<%= prod.price %>"><br>
+                    <label class="label-create col-12" for="discount">Descuento</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" value="<%= prod.discount %>" name="discount"><br>
+                    <label class="label-create col-12" for="category">Categoría</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" value="<%= prod.category %>" name="category"><br><br>
+                    <button class="btn-create col-12 col-md-3" type="submit">Editar producto</button><br>
+                    <button class="btn-create col-12 col-md-3" type="reset">Borrar formulario</button>                
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %> 
+    </body> 
+</html>

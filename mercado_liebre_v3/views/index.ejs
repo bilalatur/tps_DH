@@ -1,0 +1,65 @@
+<%- include('./partials/head') %> 
+  <body>
+    <%- include('./partials/header') %> 
+    <div class="banner col-12"></div>
+
+    <div class="principal">
+      <div class="container">
+        <div class="row">
+          <div class="titulo col-12">
+            <h2>Ofertas</h2>
+          </div>
+          <%producto.forEach(prod => {%>   
+          <% if (prod.category == 'in-sale') { %>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="contenedor-prod">
+                <div>
+                  <img class="producto-imagen" src="images/<%= prod.image  %> " alt="">
+                </div>
+                <div class="data">
+                  <a class="prod-link" href="/products/<%= prod.id %>"><span><%= prod.name %></span></a><br>
+                  <span> $<%= toThousand(prod.price) %>  </span>
+                  <% if (prod.discount != 0) { %>
+                  <span class="dto">%<%= prod.discount %> </span>
+                  <%}%> 
+                  <i class="fas fa-truck"></i>
+                  </div>
+              </div> 
+            </div>  
+            <%}%> 
+            <%});%>                                  
+        </div>
+      </div>
+    </div>
+
+    <div class="principal">
+      <div class="container">
+        <div class="row">
+          <div class="titulo col-12">
+            <h2>Basados en tu última visita</h2>
+          </div>
+          <%producto.forEach(prod => {%>   
+          <% if (prod.category == 'visited') { %>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="contenedor-prod">
+                <div>
+                  <img class="producto-imagen" src="images/<%= prod.image  %> " alt="">
+                </div>
+                <div class="data">
+                  <a class="prod-link" href="/products/<%= prod.id %>"><span><%= prod.name %></span><br></a>
+                  <span> $<%= toThousand(prod.price) %>  </span>
+                  <% if (prod.discount != 0) { %>
+                  <span class="dto">%<%= prod.discount %> </span>
+                  <%}%> 
+                  <i class="fas fa-truck"></i>
+                  </div>
+              </div> 
+            </div>  
+            <%}%> 
+            <%});%>                                  
+        </div>
+      </div>
+    </div>
+    <%- include('./partials/footer') %> 
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<%- include('./partials/head') %> 
+  <body class="body-det">
+    <%- include('./partials/header') %> 
+    <div class="container">
+        <h1 class="col-12 title-form"> Eliminar producto: <%= prod.name %> </h1>
+        <div class="row col-12">
+            <div class="form-create col-12">
+                <form class="col-12" action="/products/<%=prod.id%>/delete?_method=DELETE" method="POST">
+                    <label class="label-create col-12" for="id" name=>Id</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" value="<%= prod.id %>" name="id"><br>
+                    <label class="label-create col-12" for="name">Nombre</label><br>
+                    <input class="input-create col-12 col-md-3" type="text" value="<%= prod.name %>" name="name"><br>
+                    <br><button class="btn-create col-12 col-md-3" type="submit">Eliminar producto</button><br>
+                    <button class="btn-create col-12 col-md-3" onclick="history.back()">Volver atrás</button>                
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %> 
+    </body> 
+</html>
