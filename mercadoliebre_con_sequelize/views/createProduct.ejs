@@ -1,0 +1,39 @@
+<%- include('./partials/head') %> 
+  <body class="body-det">
+    <%- include('./partials/header') %> 
+    <div class="container">
+        <h1 class="col-12 title-form"> Crear producto </h1>
+        <div class="row col-12">
+            <div class="form-create col-12">
+                   <% if (errors.length > 0) {%> 
+                        <ol class="div-errors col-12">
+                            <% for(var i = 0; i < errors.length; i++) { %>
+                             <li class="errors"> <%= errors[i] %> </li>
+                            <% } %>
+                        </ol>
+                    <% } %>
+                <form class="col-12 create-form" action="/products/create" method="POST" enctype ="multipart/form-data">
+                    <label class="label-create col-12" for="name">Nombre</label><br> 
+                        <input class="input-create name col-12 col-md-3" type="text" name="name" id="name"><br>
+                    <label class="label-create col-12" for="description">Descripción</label><br>
+                        <input class="input-create description col-12 col-md-3" type="text" name="description" id="description"><br>
+                    <label class="label-create col-12" for="price">Precio</label><br>
+                        <input class="input-create price col-12 col-md-3" type="number" min="1" name="price" id="price"><br>
+                    <label class="label-create col-12" for="discount">Descuento</label><br>
+                        <input class="input-create discount col-12 col-md-3" type="number" min="1" name="discount" id="discount"><br>
+                    <label class="label-create col-12" for="discount">Categoría</label>
+                    <select class="select-category" name="category" id="category">
+                        <option value="in-sale">In-sale</option>
+                        <option value="visited">Visited</option>
+                    </select>
+                    <label class="label-create col-12" for="image">Imagen del producto</label><br>
+                        <input class="input-create col-12 col-md-3" type="file" name="image"><br><br>
+                    <button class="btn-create col-12 col-md-3" type="submit">Crear producto</button><br>
+                    <button class="btn-create col-12 col-md-3" type="reset">Borrar formulario</button>                
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %> 
+    </body> 
+</html>

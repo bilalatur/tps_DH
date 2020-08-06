@@ -1,0 +1,28 @@
+<%- include('./partials/head') %> 
+  <body class="body-det">
+    <%- include('./partials/header') %> 
+    <div class="container prod-det">
+        <h1 class="col-12 titulo-prod"> Detalle del producto: <%= prod.name %> </h1>
+        <div class="row p-det">
+            <div class="col-6">
+                <img src="/images/<%= prod.image %> " alt="">
+                <p><%= prod.description %> </p>
+            </div>
+            <div class="col-5 prod-det-2">
+                <h3 class="col-12"><%= prod.name %></h3> 
+                <% if(prod.discount != 0){ %>
+                    <div class="col-12 text-det"><span class="old-price">$<%= prod.precio %>/</span><span> %<%= prod.discount %></span></div>
+                    <h3 class="col-12 text-det prod-price">$<%=  precioReal %></h3>
+                <% } else { %>
+                    <h3 class="col-12 text-det prod-price">$<%=  toThousand(prod.precio) %></h3>
+                <% } %>
+                <p><i class="footer-icon fas fa-credit-card det-icon"></i> Pagá en 12 cuotas sin interés</p>
+                <p><i class="fas fa-store det-icon"></i> Retiro gratis en locales del vendedor</p>
+                <form method="GET" action="/products/<%= prod.id %>/delete"><button class="col-8 but-det">BORRAR</button></form>
+                <form method="GET" action="/products/<%= prod.id %>/edit"><button class="col-8 but-det">MODIFICAR</button></form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %> 
+    </body> 
+</html>
