@@ -17,13 +17,13 @@
                   <img class="producto-imagen" src="images/<%= prod.image  %> " alt="">
                 </div>
                 <div class="data">
+                  <i class="fas fa-truck"></i>
                   <a class="prod-link" href="/products/<%= prod.id %>"><span><%= prod.name %></span></a><br>
                   <span> $<%= toThousand(prod.precio) %>  </span>
                   <% if (prod.discount != 0) { %>
                   <span class="dto">%<%= prod.discount %> </span>
                   <%}%> 
-                  <i class="fas fa-truck"></i>
-                  </div>
+                </div>
               </div> 
             </div>  
             <%}%> 

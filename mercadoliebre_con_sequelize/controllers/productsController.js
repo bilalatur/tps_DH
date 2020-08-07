@@ -17,45 +17,32 @@ let productsController = {
         let errors = [];
         res.render('createProduct',{errors: errors})
     },
-    /*'postProduct CON VALIDACIÓN': function(req,res, next){
+    'postProduct': function(req,res, next){
         let errors = validationResult(req); 
         if(errors.errors.length == 0){
-            let nuevoProducto = {
-                name: req.body.name,
-                description: req.body.description,
-                category: req.body.category,
-                discount:req.body.discount,
-                precio:req.body.price,
+            if(req.file != undefined){
+                let nuevoProducto = {
+                    name: req.body.nombre,
+                    description: req.body.description,
+                    category: req.body.category,
+                    discount:req.body.discount,
+                    precio:req.body.price,
+                    image:req.file.filename,
+                }
+                db.Product.create(nuevoProducto)
+                    .then(function(){
+                        res.redirect('/products');
+                        })
+            } else {
+                let imageError = {
+                    msg: "La imagen del producto es obligatoria"
+                }
+                errors.errors.push(imageError)
+                res.render('createProduct',{errors:errors.errors})
             }
-            db.Product.create(nuevoProducto)
-                .then(function(){
-                    res.redirect('/products');
-                    })
         } else {
+            console.log(req.image)
             res.render('createProduct',{errors:errors.errors})
-        }
-    },*/
-    'postProduct': function(req,res, next){
-        let errors = []
-        if (req.file != undefined) { 
-            console.log(req.file)
-            let nuevoProducto = {
-                name: req.body.name,
-                description: req.body.description,
-                category: req.body.category,
-                discount:req.body.discount,
-                precio:req.body.price,
-                image:req.file.filename,
-              }
-              db.Product.create(nuevoProducto)
-                  .then(function(){
-                      res.redirect('/products');
-                      })
-        } else {
-            let error = "Debe subir una imagen para el producto"
-            errors.push(error);
-            console.log(errors)
-            res.render('createProduct',{errors: errors})
         }
     },
     'delete': function(req,res){
@@ -75,26 +62,35 @@ let productsController = {
             })
     },
     'edit': function(req,res){
+        let errors = [];
         db.Product.findByPk(req.params.id)
             .then(function(product){
-                res.render('editProduct', {prod: product});
+                res.render('editProduct', {prod: product, errors: errors});
             })
     },
     'putEditProduct': function(req,res){
-    db.Product.update({
-        name: req.body.name,
-        description: req.body.description,
-        category: req.body.category,
-        discount:req.body.discount,
-        precio:req.body.price,
-    }, {
-        where:{
-            id: req.params.id
-        }
-    })            
-        .then(function(product){
-            res.redirect('/products');
-    })
+        let errors = validationResult(req); 
+        if(errors.errors.length == 0){
+            db.Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                category: req.body.category,
+                discount:req.body.discount,
+                precio:req.body.price,
+            }, {
+                where:{
+                    id: req.params.id
+                }
+            })            
+                .then(function(product){
+                    res.redirect('/products');
+            })
+        } else {
+            db.Product.findByPk(req.params.id)
+                .then(function(product){
+                    res.render('editProduct',{errors:errors.errors, prod: product})
+                })
+            }
     },
     'productDetail': function(req,res){
         db.Product.findByPk(req.params.id)

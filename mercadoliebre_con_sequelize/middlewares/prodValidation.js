@@ -4,19 +4,25 @@ let validator = {
     middNext: function(req, res,next){
         next()
     },
-    prodValidation: [
-        check('name')
-            .exists().withMessage('El nombre del producto es obligatorio')
-            .trim(),
-        check('descrption')
-            .exists().withMessage('La descripción del producto es obligatoria')
-            .trim(),
+    prodValidation: [ 
+        body().custom(function(req){
+            if(req.nombre == ""){
+                return false;
+            } else {
+                return true;
+            }
+        }).withMessage('El nombre del producto es obligatorio'),
+        body().custom(function(req){
+            if(req.description == ""){
+                return false;
+            } else {
+                return true;
+            }
+        }).withMessage('La descripción del producto es obligatoria'),
         check('price')
             .exists().withMessage('El precio del producto es obligatorio')
             .trim()
             .isNumeric().withMessage('El precio debe ser un valor numérico'),
-        check('discount')
-            .isNumeric().withMessage('El descuento debe ser un valor numérico'),
     ]
 }
 

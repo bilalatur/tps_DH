@@ -11,8 +11,7 @@ router.get('/', productsController.products);
 router.get('/create', productsController.create);
 
 /* CREATE PRODUCT POST  */
-//router.post('/create', uploadFile.uploadFile, middProd.prodValidation, productsController.postProduct);
-router.post('/create', uploadFile.uploadFile, productsController.postProduct);
+router.post('/create', uploadFile.uploadFile, middProd.prodValidation, productsController.postProduct);
 
 /* PRODUCT DETAIL */
 router.get('/:id', productsController.productDetail);
@@ -27,6 +26,6 @@ router.delete('/:id/delete', productsController.deleteProduct);
 router.get('/:id/edit', productsController.edit);
 
 /* PRODUCT PUT MODIFICAR*/
-router.put('/:id/edit', productsController.putEditProduct);
+router.put('/:id/edit', middProd.prodValidation, productsController.putEditProduct);
 
 module.exports = router;

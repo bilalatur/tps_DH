@@ -6,6 +6,13 @@
         <div class="row col-12">
             <div class="form-create col-12">
                 <form class="col-12" action="/products/<%=prod.id%>/edit?_method=PUT" method="POST">
+                    <% if (errors.length > 0) {%> 
+                        <ol class="div-errors col-12">
+                            <% for(var i = 0; i < errors.length; i++) { %>
+                             <li class="errors"> <%= errors[i].msg %> </li>
+                            <% } %>
+                        </ol>
+                    <% } %>
                     <label class="label-create col-12" for="name">Nombre</label><br>
                     <input class="input-create col-12 col-md-3" type="text" value="<%= prod.name %>" name="name"><br>
                     <label class="label-create col-12" for="description">Descripción</label><br>
